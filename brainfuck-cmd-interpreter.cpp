@@ -27,7 +27,6 @@
                     pc(*data_ptr); break;
                 case ',':
                     *data_ptr=gc(); break;
-
                 case ']':
                     if(*data_ptr){
                         instr_ptr = jump_loc.back();
