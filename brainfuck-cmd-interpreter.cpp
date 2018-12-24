@@ -39,10 +39,8 @@
                     if(*data_ptr)
                         jump_loc.push_back(instr_ptr); 
                     else
-                        for(;*instr_ptr != ']'; instr_ptr++);
-                    
+                        for(;*instr_ptr != ']'; instr_ptr++);    
                     break;
-
                 default:  
                     char* inst_peek = instr_ptr;
                     if(*inst_peek =='E')
