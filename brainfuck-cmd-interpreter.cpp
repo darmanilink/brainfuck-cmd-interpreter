@@ -48,8 +48,18 @@
                                 std::cout << std::endl << "end sequence found: terminating. . . ";
                                 return 0;
                             }
-                    if(*inst_peek == '\0')
-                        return 0;       
+                    else if(*inst_peek == '\0')
+                        return 0;
+                    else if(*inst_peek == 'D')
+                        if(++*inst_peek == 'B'){
+                            int start,stop;
+                            std::cout << "\nDEBUG: Specifiy tape range (space seperated): ";
+                            std::cin >> start >> stop;
+                            std::cout << "\nindex\thex\tdec";
+                            for(; start <= stop; start++)
+                                std::cout << start << "\t" << std::hex << std::uppercase << data[start] << "\t" << std::dec << std::nouppercase << data[start];
+                        }
+
             }
         }
      return 0;
